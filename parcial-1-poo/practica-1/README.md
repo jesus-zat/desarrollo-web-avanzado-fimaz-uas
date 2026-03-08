@@ -16,11 +16,17 @@ del objeto y muestrar los datos del usuario utilizando los métodos getters.
 
 ## Instrucciones de ejecucion
 1-Abrir el xampp
+
 2-Iniciar el servicio de apache desde el panel de control de este
+
 3-Rectificar que la carpeta del proyecto este dentro del directorio de htdocs de xampp
+
 4-Una vez que se rectifique lo siguiente sera abrir el navegador y guiarse de esta direccion:
 /localhost/nombre-de-tu-carpeta/index.php
+
 5-Si todo sale bien el programa mostrara el nombre y correo del usuario
 Ejemplo:
+
 nombre: Jesús Zatarain Tirado
+
 correo: jesusitojzt@gmail.com
