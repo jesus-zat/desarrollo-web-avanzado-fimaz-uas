@@ -12,4 +12,5 @@ class Admin extends Usuario {
         return "Administrador"
     }
 
-    }
+}
+?>
