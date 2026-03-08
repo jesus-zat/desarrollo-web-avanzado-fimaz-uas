@@ -9,7 +9,7 @@ require_once "Usuario.php";
 class Admin extends Usuario {
     //Metodo original de Admin
     public function getRol(){
-        return "Administrador"
+        return "Administrador";
     }
 
 }
