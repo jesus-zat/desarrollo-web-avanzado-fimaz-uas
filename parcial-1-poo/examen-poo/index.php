@@ -17,7 +17,7 @@ try{
     $usuarios[] = $objAlumno;
 
     // Usuario con correo inválido (provoca excepción)
-    $objError = new Alumno("Pedro","pedro@gmail.com",12345);
+    $objError = new Alumno("Pedro","correo-invalido",12345);
     $usuarios[] = $objError;
 
 }catch(Exception $e){
