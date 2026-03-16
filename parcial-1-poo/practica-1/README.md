@@ -2,7 +2,7 @@
 
 ## Objetivo de la practica
 Creamos una clase con atributos privados constructor, getters y setters
-despues instanciamos instanciamos un objeto desde index.php, utilizando
+despues instanciamos un objeto desde index.php, utilizando
 require
 
 ## Descripcion de la clase creada
