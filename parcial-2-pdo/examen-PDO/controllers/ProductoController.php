@@ -1,4 +1,4 @@
-<!-- Jesús Zatarain Tirado  3-1 -->
+<!-- Jesús Zatarain Tirado  3-1  -->
 <?php
 require_once __DIR__ . "/../config/Database.php";
 require_once __DIR__ . "/../models/Producto.php";
