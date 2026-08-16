@@ -1,5 +1,5 @@
 <?php
-    //Jesus Zatarain Tirado
+    //Jesus Zatarain Tirado LISI 3-1
     //Crear una clase para conexion a base de datos mediante PDO.
 
     class DataBase{
