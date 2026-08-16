@@ -1,5 +1,7 @@
 <?php
 
+//Jesús Zatarain Tirado LISI 3-1
+
 try{
 
     $pdo = new PDO(
