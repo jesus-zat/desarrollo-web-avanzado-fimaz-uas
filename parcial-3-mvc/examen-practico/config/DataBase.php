@@ -22,7 +22,7 @@
                 ";dbname=".$this->db,$this->user,$this->password);
                  return $PDO;
 
-            } catch (PDOException $E) {
+            } catch (PDOException $e) {
                  return $e->getMessage();  
 
             }
