@@ -1,4 +1,5 @@
 <?php
+    //Jesus Zatarain Tirado
     //Crear una clase para conexion a base de datos mediante PDO.
 
     class DataBase{
