@@ -1,4 +1,5 @@
 <?php
+// Jesús Zatarain Tirado LISI 3-1
 class Database{
     private $host = "localhost";
     private $db_name = "productos";
