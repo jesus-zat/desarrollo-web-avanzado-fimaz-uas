@@ -1,7 +1,7 @@
 <!-- Jesús Zatarain Tirado  3-1 -->
 <?php
     class Database{
-        private $host = "localhost:3307";
+        private $host = "localhost";
         private $db = "phppdobd";
         private $user = "root";
         private $password = "";
