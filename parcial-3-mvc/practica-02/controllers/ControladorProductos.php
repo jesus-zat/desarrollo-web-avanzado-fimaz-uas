@@ -1,5 +1,5 @@
 <?php
-//Jesús Zatarain Tirado LISI 3-1    
+//Jesús Zatarain Tirado LISI 3-1
     require_once("../models/modeloProductos.php");
 
     class productosController{
@@ -18,6 +18,10 @@
             //Recordemos que la función insert del modelo, regresa el último id generado.
             $id= $this->model->insert($producto, $cantidad, $precio_unitario);
             return ($id!=false) ? header("Location: ../index.php") : header("Location: fromProductos.php");
+        }
+        //Método que manda ejecutar la función read del modelo de Productos.
+        public function readProductos(){
+            return ($this->model->read()) ? $this->model->read() : false;
         }
     }
 ?>

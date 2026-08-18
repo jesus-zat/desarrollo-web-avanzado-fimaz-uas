@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Jesús Zatarain Tirado LISI 3-1 -->
+<!-- Jesúa Zatarain Tirado LISI 3-1 -->
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -12,4 +12,16 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh950GYgZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
 </head>
+
 <body>
+<ul class="nav justify-content-center">
+    <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="../index.php">Inicio</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="./views/frmProductos.php">Agregar Producto</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="./views/lstProductos.php">Listado de Producto</a>
+    </li>
+</ul>
