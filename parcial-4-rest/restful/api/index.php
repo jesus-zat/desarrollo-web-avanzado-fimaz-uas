@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS'){
     exit;
 }
 
-require_once "../configuracion/database.php";
+require_once "../configuracion/Database.php";
 require_once "../clases/Productos.php";
 
 $database = new Database();
@@ -24,7 +24,7 @@ $method = $_SERVER['REQUEST_METHOD'];
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 //Quitar la base del proyecto
-$basePath = '/RESTful/api';
+$basePath = '/desarrollo-web-avanzado-fimaz-uas/parcial-4-rest/restful/api';
 $endpoint = str_replace($basePath,'',$uri);
 $endpoint = trim($endpoint,'/');
 

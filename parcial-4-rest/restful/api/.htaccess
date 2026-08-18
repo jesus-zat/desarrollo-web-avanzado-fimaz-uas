@@ -1,8 +1,6 @@
 RewriteEngine On
 
-RewriteBase /RESTful/api
-
-
+RewriteBase /desarrollo-web-avanzado-fimaz-uas/parcial-4-rest/restful/api
 
 RewriteCond %{REQUEST_FILENAME} !-f
 
