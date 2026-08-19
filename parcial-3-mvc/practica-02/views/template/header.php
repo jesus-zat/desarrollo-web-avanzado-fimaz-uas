@@ -19,9 +19,9 @@
         <a class="nav-link" aria-current="page" href="../index.php">Inicio</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="./views/frmProductos.php">Agregar Producto</a>
+        <a class="nav-link" href="../frmProductos.php">Agregar Producto</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="./views/lstProductos.php">Listado de Producto</a>
+        <a class="nav-link" href="../lstProductos.php">Listado de Producto</a>
     </li>
 </ul>

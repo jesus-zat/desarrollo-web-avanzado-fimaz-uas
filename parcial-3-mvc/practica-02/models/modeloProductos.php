@@ -2,7 +2,7 @@
 
 //Jesús Zatarain Tirado LISI 3-1
 
-require_once("../../config/DataBase.php");
+require_once("../config/DataBase.php");
 
 class productosModel
 {
