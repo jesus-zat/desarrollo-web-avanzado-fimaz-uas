@@ -1,55 +1,115 @@
-<?php 
-//Jesús Zatarain Tirado LISI 3-1
+<?php
 /**
- * Layout de Apertura - Cabecera General (Header)
+ * Layout de Cierre - Pie de Página General (Footer)
  *
- * Este componente inicializa el estado de la sesión si no ha sido iniciado,
- * genera un token criptográfico CSRF seguro para la protección de formularios,
- * carga las dependencias de Bootstrap 5 en el cliente y gestiona la renderización
- * de mensajes flash de éxito o error almacenados en la sesión.
+ * Renderiza la sección inferior de la interfaz gráfica del sistema. Incorpora
+ * los estilos CSS necesarios para implementar un "Sticky Footer" que se adhiere 
+ * al fondo de la ventana mediante Flexbox, despliega los créditos institucionales 
+ * de la facultad y evalúa dinámicamente la ruta actual para proveer un acceso 
+ * directo condicional hacia el endpoint de la API JSON.
  *
  * @package Views
  * @subpackage Layouts
  * @uses BASE_URL Constante global para la resolución de rutas relativas y absolutas del proyecto.
- * @global array $_SESSION['csrf_token'] Almacena el token de seguridad para validación de peticiones POST.
- * @global string $_SESSION['success'] Mensaje flash de operación exitosa (se elimina tras renderizar).
- * @global string $_SESSION['error'] Mensaje flash de error en la operación (se elimina tras renderizar).
+ * @global array $_GET['route'] Analiza este parámetro de la URL para determinar si se expone el enlace a la API.
  */
-
-if (session_status() === PHP_SESSION_NONE) session_start(); 
-// Si no existe un token para esta sesión, lo creamos
-if (empty($_SESSION['csrf_token'])) {
-    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
-}
 ?>
+<style>
+    .main-footer {
+        background-color: #1a1d20;
+        color: #adb5bd;
+        /* Padding mínimo para que sea lo más bajo posible */
+        padding: 10px 0 5px 0; 
+        margin-top: 10px;
+        font-family: 'Segoe UI', sans-serif;
+        border-top: 3px solid #ffc107;
+    }
 
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Desarrollo Web Avanzado: POO+PDO+TryCatch-Namespaces-Autoload-Transacciones-MVC</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a href="<?= BASE_URL ?>" class="navbar-brand">Tienda MVC</a>
-                <div>
-                    <a href="<?= BASE_URL ?>" class="btn btn-outline-light btn-sm me-2">Catálogo</a>
-                    <a href="<?= BASE_URL ?>login" class="btn btn-warning btn-sm">Administrador</a>
-                </div>
-            </div>
-        </nav>
-        <div class="container mt-4">
-            <?php if (isset($_SESSION['success'])): ?>
-                <div class="alert alert-success">
-                    <?= htmlspecialchars($_SESSION['success']); unset($_SESSION['success']); ?>
-                </div>
-            <?php endif; ?>
+    .footer-container {
+        max-width: 1100px; 
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        /* Alineamos al centro para que todo quepa en una línea visual */
+        align-items: center; 
+        padding: 0 15px;
+    }
 
-            <?php if (isset($_SESSION['error'])): ?>
-                <div class="alert alert-danger">
-                    <?= htmlspecialchars($_SESSION['error']); unset($_SESSION['error']); ?>
-                </div>
-            <?php endif; ?>
+    .footer-section {
+        /* Permitimos que el ancho sea flexible según el contenido */
+        flex: 1; 
+    }
+
+    .footer-section h4 {
+        color: #ffffff;
+        font-size: 0.75rem;
+        /* Quitamos el margen inferior para reducir altura */
+        margin: 0; 
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .footer-section p, .footer-section li {
+        font-size: 0.7rem; 
+        line-height: 1.2;
+        /* Margen mínimo entre líneas */
+        margin: 2px 0; 
+    }
+
+    .text-center { text-align: center; }
+    .text-right { text-align: right; }
+    
+    .team-list { list-style: none; padding: 0; margin: 0; }
+    .highlight { color: #ffc107; font-weight: bold; }
+
+    .footer-bottom {
+        text-align: center;
+        margin-top: 5px;
+        padding-top: 5px;
+        border-top: 1px solid #2d3238;
+        font-size: 0.65rem;
+        opacity: 0.6;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; 
+        margin: 0;
+    }
+
+    main, .container { 
+        flex: 1; 
+    }
+</style>
+</div>
+</body>
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>FIMAZ - UAS</h4>
+            <p><span class="highlight">Dr. José Alfonso Aguilar Calderón</span></p>
+        </div>
+        
+        <div class="footer-section text-center">
+            <h4>Integrantes</h4>
+            <p style="font-size: 0.65rem;">Jesús Zatarain Tirado LISI 3-1</p>
+        </div>
+
+        <div class="footer-section text-right">
+            <h4>Ubicación</h4>
+            <p>Av. Universidad, Av. Leonismo Internacional y, Tellería, Mazatlán, Sin.<br>C.P. 82000</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Facultad de Informática Mazatlán.
+            <br>
+            <?php if (isset($_GET['route']) && ($_GET['route'] === 'productos' || $_GET['route'] === 'bitacora')): ?>
+                <a href="<?= BASE_URL ?>api/productos" target="_blank">
+                    Ver API JSON
+                </a>
+            <?php endif; ?> 
+        </p>
+    </div>
+</footer>
