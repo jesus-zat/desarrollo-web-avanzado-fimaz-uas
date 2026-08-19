@@ -1,4 +1,5 @@
 <?php
+//Jesús Zatarain Tirado LISI 3-1
 /**
  * Layout de Cierre - Pie de Página General (Footer)
  *
@@ -16,13 +17,13 @@
 ?>
 <style>
     .main-footer {
-        background-color: #1a1d20;
-        color: #adb5bd;
+        background-color: #0b0f19;
+        color: #8b98a9;
         /* Padding mínimo para que sea lo más bajo posible */
         padding: 10px 0 5px 0; 
         margin-top: 10px;
         font-family: 'Segoe UI', sans-serif;
-        border-top: 3px solid #ffc107;
+        border-top: 3px solid #22d3ee;
     }
 
     .footer-container {
@@ -41,7 +42,7 @@
     }
 
     .footer-section h4 {
-        color: #ffffff;
+        color: #e6edf3;
         font-size: 0.75rem;
         /* Quitamos el margen inferior para reducir altura */
         margin: 0; 
@@ -60,15 +61,24 @@
     .text-right { text-align: right; }
     
     .team-list { list-style: none; padding: 0; margin: 0; }
-    .highlight { color: #ffc107; font-weight: bold; }
+    .highlight { color: #22d3ee; font-weight: bold; }
 
     .footer-bottom {
         text-align: center;
         margin-top: 5px;
         padding-top: 5px;
-        border-top: 1px solid #2d3238;
+        border-top: 1px solid #1b2130;
         font-size: 0.65rem;
-        opacity: 0.6;
+        opacity: 0.7;
+    }
+
+    .footer-bottom a {
+        color: #22d3ee;
+        text-decoration: none;
+    }
+
+    .footer-bottom a:hover {
+        text-decoration: underline;
     }
 
     body {

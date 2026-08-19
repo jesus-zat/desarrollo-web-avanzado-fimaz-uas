@@ -30,14 +30,47 @@ if (empty($_SESSION['csrf_token'])) {
         <title>Desarrollo Web Avanzado: POO+PDO+TryCatch-Namespaces-Autoload-Transacciones-MVC</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <style>
+            .navbar-tech {
+                background-color: #0b0f19;
+                border-bottom: 3px solid #22d3ee;
+            }
+            .navbar-tech .navbar-brand {
+                color: #e6edf3;
+                font-weight: 600;
+                letter-spacing: 0.5px;
+            }
+            .navbar-tech .navbar-brand:hover {
+                color: #22d3ee;
+            }
+            .btn-tech-accent {
+                background-color: #22d3ee;
+                border-color: #22d3ee;
+                color: #0b0f19;
+                font-weight: 600;
+            }
+            .btn-tech-accent:hover {
+                background-color: #06b6d4;
+                border-color: #06b6d4;
+                color: #0b0f19;
+            }
+            .btn-outline-tech {
+                border-color: #22d3ee;
+                color: #22d3ee;
+            }
+            .btn-outline-tech:hover {
+                background-color: #22d3ee;
+                color: #0b0f19;
+            }
+        </style>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-tech">
             <div class="container">
                 <a href="<?= BASE_URL ?>" class="navbar-brand">Tienda MVC</a>
                 <div>
-                    <a href="<?= BASE_URL ?>" class="btn btn-outline-light btn-sm me-2">Catálogo</a>
-                    <a href="<?= BASE_URL ?>login" class="btn btn-warning btn-sm">Administrador</a>
+                    <a href="<?= BASE_URL ?>" class="btn btn-outline-tech btn-sm me-2">Catálogo</a>
+                    <a href="<?= BASE_URL ?>login" class="btn btn-tech-accent btn-sm">Administrador</a>
                 </div>
             </div>
         </nav>
