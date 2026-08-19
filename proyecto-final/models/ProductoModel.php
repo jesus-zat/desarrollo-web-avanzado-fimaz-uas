@@ -1,5 +1,5 @@
 <?php
-//Jesúa Zatarain Tirado LISI 3-1
+//Jesús Zatarian Tirado LISI 3-1
 
 namespace Models;
 
